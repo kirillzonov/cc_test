@@ -1,4 +1,12 @@
 CcTest::Application.routes.draw do
+  root :to => "session#index"
+
+  controller :session do
+    get 'login' => :new
+    post 'login' => :create
+  end
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
