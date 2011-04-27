@@ -10,13 +10,21 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110422174834) do
+ActiveRecord::Schema.define(:version => 20110427163644) do
+
+  create_table "aasds", :force => true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", :force => true do |t|
     t.string   "email"
     t.string   "password"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "user_id"
   end
+
+  add_index "users", ["user_id"], :name => "index_users_on_user_id", :unique => true
 
 end

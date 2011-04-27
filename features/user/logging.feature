@@ -4,9 +4,7 @@ Feature: User logging in
   Wants to be able to log in system
 
 Background:
-    Given the following user exists:
-      |  email             |  password  |
-      |  user@example.org  |  password  |
+    Given a user exists
     And I am on the login page
 
 Scenario: User tries to log in with wrong email
